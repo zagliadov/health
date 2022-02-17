@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
-import img from "../../img/Img.png";
+import grand from "../../img/grand.png";
+import watchTheMember from '../../img/watchTheMember.png';
 import { Row, Col, Typography, Button } from "antd";
 
 
@@ -28,6 +29,9 @@ const RightCol = styled(Col)`
   justify-content: center;
   align-items: center;
   @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     padding-top: 0px;
     height: 100vh;
   }
@@ -79,14 +83,15 @@ const LearnMoreButton = styled(Button)`
 const ImageWrapper = styled.div`
   width: 80%;
   height: 100%;
-  background: url(${img});
+  background: url(${grand});
   background-position: center center;
   background-size: contain;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   background-repeat: no-repeat;
   @media (max-width: 768px) {
     background-position: top;
+    height: 70%;
   }
 `;
 const TextWrapper = styled(Text)`
@@ -94,6 +99,17 @@ const TextWrapper = styled(Text)`
     font-size: 22px;
   }
 `;
+const WatchVideoWrapper = styled.div`
+  width: 70%;
+  height: 100px;
+  border: 1px solid red;
+`;
+const ButtonWrapper = styled(Button)`
+  width: 100px;
+  height: 100px;
+  background: red;
+  border: 1px solid red;
+ `;
 
 export const FrontPage: FC = () => {
   return (
@@ -119,6 +135,13 @@ export const FrontPage: FC = () => {
 
       <RightCol xs={24} sm={24} md={24} lg={12} xl={12}>
         <ImageWrapper />
+        <Shadow />
+        <WatchVideoWrapper>
+          <ButtonWrapper shape="circle" type="primary"/>
+          <Text>
+            Whatch the member video
+          </Text>
+        </WatchVideoWrapper>
       </RightCol>
     </PageRow>
   );
