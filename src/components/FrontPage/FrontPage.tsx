@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import test from "../../img/Img.png";
+import img from "../../img/Img.png";
 import { Row, Col, Typography, Button, Image } from "antd";
 import { Arrow } from "./Arrow";
 
@@ -36,6 +36,16 @@ const Shadow = styled.div`
   filter: blur(380px);
   transform: rotate(-12.39deg);
 `;
+const ImageWrapper = styled.div`
+  width: 80%;
+  height: 100%;
+  background: url(${img});
+  background-position: center center;
+  background-size: contain;
+  position: relative;
+  z-index: 1;
+  background-repeat: no-repeat;
+`;
 
 export const FrontPage: FC = () => {
   return (
@@ -61,7 +71,8 @@ export const FrontPage: FC = () => {
       </LeftCol>
 
       <RightCol span={12}>
-        <Image src={test} width={400} />
+        {/* <Image src={img} width={400} /> */}
+        <ImageWrapper />
       </RightCol>
     </Row>
   );

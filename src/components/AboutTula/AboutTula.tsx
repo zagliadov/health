@@ -73,7 +73,7 @@ const Shadow = styled.div`
   height: 400px;
   position: absolute;
   z-index: 0;
-  right: -50px;
+  left: 0px;
   bottom: 30px;
   background: #06be53;
   opacity: 0.8;
@@ -121,8 +121,7 @@ export const AboutTula: FC = () => {
       </LeftCol>
       <RightCol span={12}>
       <Shadow />
-        <ImageWrapper>
-        </ImageWrapper>
+        <ImageWrapper />
       </RightCol>
     </Row>
   );
