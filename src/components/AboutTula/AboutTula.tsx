@@ -79,6 +79,13 @@ const Shadow = styled.div`
   opacity: 0.8;
   filter: blur(300px);
   transform: matrix(0.89, -0.39, 0.48, 0.91, 0, 0);
+  @media (max-width: 768px) {
+    width: 200px;
+    height: 200px;
+    left: 0px;
+    bottom: 330px;
+    filter: blur(300px);
+  }
 `;
 export const AboutTula: FC = () => {
   const genExtra = (icon: string) => {
@@ -120,7 +127,7 @@ export const AboutTula: FC = () => {
         </CardFooter>
       </LeftCol>
       <RightCol span={12}>
-      <Shadow />
+        <Shadow />
         <ImageWrapper />
       </RightCol>
     </Row>
