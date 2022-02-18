@@ -5,7 +5,6 @@ import { Burger } from '../Menu/Burger/Burger';
 import { ExtraLargeMenu } from '../Menu/ExtraLargeMenu/ExtraLargeMenu';
 
 
-
 export const Menu: FC = () => {
     const open = useAppSelector((state: RootState) => state.data.menuOpen)
     const dispatch = useAppDispatch();
@@ -14,6 +13,7 @@ export const Menu: FC = () => {
         <>
             <Burger />
             <ExtraLargeMenu />
+
         </>
 
 

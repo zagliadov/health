@@ -3,6 +3,7 @@ import { Image, Row, Col } from "antd";
 import { Menu } from '../Menu/Menu'
 import logo from '../../../img/logo.png';
 import styled from 'styled-components';
+import { ExtraSmallMenu } from "../Menu/ExtraSmallMenu/ExtraSmallMenu";
 
 const Wrapper = styled(Row)`
 
@@ -34,6 +35,7 @@ export const Navigation: FC = () => {
       <MenuWrapper xs={12} sm={12} md={18} lg={20} xl={20}>
         <Menu />
       </MenuWrapper>
+      <ExtraSmallMenu />
     </Wrapper>
 
   );
