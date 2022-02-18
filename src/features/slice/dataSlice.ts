@@ -3,10 +3,12 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface IUserState {
   message: string,
+  menuOpen: boolean,
 }
 
 const initialState: IUserState = {
   message: 'loading',
+  menuOpen: false,
 }
 
 
@@ -16,8 +18,11 @@ const dataSlice = createSlice({
   reducers: {
     setMessage(state, action) {
       state.message = action.payload;
+    },
+    setMenuOpen(state, action) {
+      state.menuOpen = action.payload;
     }
-    
+
   },
 
   extraReducers: (builder) => {
@@ -29,9 +34,9 @@ const dataSlice = createSlice({
     //   })
     //   .addCase(registration.rejected, () => { });
   },
-}); 
+});
 
-export const { setMessage } = dataSlice.actions;
+export const { setMessage, setMenuOpen } = dataSlice.actions;
 
 
 
