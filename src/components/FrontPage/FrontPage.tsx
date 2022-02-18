@@ -2,6 +2,7 @@ import { FC } from "react";
 import styled from "styled-components";
 import grand from "../../img/grand.png";
 import watchTheMember from '../../img/watchTheMember.png';
+import { CaretRightOutlined } from "@ant-design/icons";
 import { Row, Col, Typography, Button } from "antd";
 
 
@@ -100,16 +101,38 @@ const TextWrapper = styled(Text)`
   }
 `;
 const WatchVideoWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
   width: 70%;
-  height: 100px;
-  border: 1px solid red;
+  height: 115px;
 `;
 const ButtonWrapper = styled(Button)`
-  width: 100px;
-  height: 100px;
-  background: red;
-  border: 1px solid red;
- `;
+  width: 80px;
+  height: 80px;
+  background: url(${watchTheMember});
+  background-position: center center;
+  background-size: cover;
+  &:hover,
+  &:focus,
+  &:active {
+    background: url(${watchTheMember});
+    background-position: center center;
+    background-size: cover;
+  }
+`;
+
+const ModifiedCaretRightOutlined = styled(CaretRightOutlined)`
+  font-size: 33px;
+  color: #ffffff;
+`;
+
+const TextWhatchVideo = styled(Text)`
+  font-size: 22px;
+`;
+
 
 export const FrontPage: FC = () => {
   return (
@@ -137,10 +160,12 @@ export const FrontPage: FC = () => {
         <ImageWrapper />
         <Shadow />
         <WatchVideoWrapper>
-          <ButtonWrapper shape="circle" type="primary"/>
-          <Text>
+          <ButtonWrapper shape="circle">
+            <ModifiedCaretRightOutlined />
+          </ButtonWrapper>
+          <TextWhatchVideo strong>
             Whatch the member video
-          </Text>
+          </TextWhatchVideo>
         </WatchVideoWrapper>
       </RightCol>
     </PageRow>
