@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { useAppSelector, RootState } from "../../features/app/store";
 import { Layout } from "antd";
 import { Navigation } from "../Header/Navigation/Navigation";
 import { FrontPage } from "../FrontPage/FrontPage";
@@ -8,7 +9,12 @@ import styled from 'styled-components';
 
 const { Header, Footer, Content } = Layout;
 
-const ModifiedLayout = styled(Layout)`
+interface IMenuOpen {
+  open: boolean;
+}
+const ModifiedLayout = styled(Layout)<IMenuOpen>`
+  // overflow-y: ${({open}) => open ? 'hidden' : 'visible'};
+  
   background: #ffffff;
 `;
 const ModifiedHeader = styled(Header)`
@@ -19,8 +25,10 @@ const ModifiedHeader = styled(Header)`
 
 
 export const App: FC = () => {
+  const open = useAppSelector((state: RootState) => state.data.menuOpen);
+
   return (
-    <ModifiedLayout>
+    <ModifiedLayout open={open}>
       <ModifiedHeader>
         <Navigation />
       </ModifiedHeader>
