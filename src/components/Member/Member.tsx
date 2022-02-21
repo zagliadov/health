@@ -11,9 +11,11 @@ const { Text } = Typography;
 const Wrapper = styled(Row)`
   display: flex;
   flex-direction: column;
+  position: relative;
   justify-content: space-around;
   align-items: center;
   height: 100vh;
+  width: 100%;
 `;
 
 const ImageWrapper = styled.div`
@@ -33,6 +35,16 @@ const ButtonWrapper = styled.div`
   height: 100px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
   border-radius: 16px;
+  @media (min-width: 768px) {
+    width: 272px;
+    position: absolute;
+    bottom: 240px;
+    right: 140px;
+    background-color: #ffffff;
+  }
+  @media (min-width: 992px) {
+    right: 30px;
+  }
 `;
 const VideoButton = styled(Button)`
   width: 80px;

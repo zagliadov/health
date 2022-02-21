@@ -18,7 +18,12 @@ const ModifiedHeader = styled(Header)`
   padding: 10px;
   height: auto;
 `;
-
+const FrontPageWrapper = styled.div`
+  @media (min-width: 992px) {
+    display: flex;
+    flex-direction: row;
+  }
+`;
 
 
 export const App: FC = () => {
@@ -34,10 +39,10 @@ export const App: FC = () => {
         {open ?
           <ExtraSmallMenu />
           :
-          <>
+          <FrontPageWrapper>
             <FrontPage />
             <Member />
-          </>
+          </FrontPageWrapper>
         }
 
 

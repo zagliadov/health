@@ -38,16 +38,28 @@ const ModifiedText = styled(Text)`
   text-align: center;
   font-weight: normal;
   font-size: 18px;
+  @media (min-width: 768px) {
+    font-size: 30px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 `;
 
 const GetStartedButton = styled(Button)`  
   font-size: 22px;
   height: auto;
   width: 90%;
+  @media (min-width: 768px) {
+    width: 30%;
+  }
 `;
 const LearnMoreButton = styled(Button)`
   font-size: 20px;
   height: auto;
+  @media (min-width: 768px) {
+    padding-left: 100px;
+  }
 `;
 const ButtonWrapper = styled.div`
   display: flex;
@@ -56,9 +68,13 @@ const ButtonWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 20%;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+
 `;
-
-
 
 
 export const FrontPage: FC = () => {
