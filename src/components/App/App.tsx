@@ -37,7 +37,6 @@ export const App: FC = () => {
           <>
             <FrontPage />
             <HowItWorks />
-            <AboutTula />
           </>
         }
 
