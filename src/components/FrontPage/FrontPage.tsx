@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import grand from "../../img/grand.png";
+import secondPic from "../../img/secondPic.png";
 import watchTheMember from '../../img/watchTheMember.png';
 import { CaretRightOutlined } from "@ant-design/icons";
 import { Row, Col, Typography, Button } from "antd";
@@ -37,6 +37,7 @@ const RightCol = styled(Col)`
     height: 100vh;
   }
 `;
+
 const PageRow = styled(Row)`
   height: 100vh;
   @media (max-width: 768px) {
@@ -84,11 +85,11 @@ const LearnMoreButton = styled(Button)`
 const ImageWrapper = styled.div`
   width: 80%;
   height: 100%;
-  background: url(${grand});
+  background: url(${secondPic});
   background-position: center center;
   background-size: contain;
   position: relative;
-  z-index: 3;
+  z-index: 6;
   background-repeat: no-repeat;
   @media (max-width: 768px) {
     background-position: top;
@@ -135,6 +136,7 @@ const TextWhatchVideo = styled(Text)`
 
 
 export const FrontPage: FC = () => {
+
   return (
     <PageRow>
       <LeftCol xs={24} sm={24} md={24} lg={12} xl={12}>

@@ -2,10 +2,8 @@ import { FC } from "react";
 import { Row, Col, Typography, Button, Image } from "antd";
 import { CaretRightOutlined } from "@ant-design/icons";
 import styled from "styled-components";
-import second from "../../img/second.png";
-import union from "../../img/Union.png";
 import base from "../../img/Base.png";
-import secondBase from "../../img/SecondBase.png";
+
 
 const { Title, Text } = Typography;
 
@@ -48,26 +46,12 @@ const ImageWrapper = styled.div`
   position: relative;
   width: 80%;
   height: 80%;
-  background: url(${second});
+  // background: url();
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 `;
 
-interface PositionProps {
-  top?: string;
-  bottom?: string;
-  left?: string;
-  right?: string;
-}
-const AbsoluteWrapper = styled.div<PositionProps>`
-  top: ${({ top }) => top};
-  bottom: ${({ bottom }) => bottom};
-  left: ${({ left }) => left};
-  right: ${({ right }) => right};
-  position: absolute;
-  z-index: 1;
-`;
 const PlayVideoButton = styled(Button)`
   background: #000000;
 `;
@@ -82,15 +66,6 @@ export const HowItWorks: FC = () => {
     <Row style={{ height: "100vh" }}>
       <LeftCol span={12}>
         <ImageWrapper>
-          <AbsoluteWrapper bottom="390px" right={"-50px"}>
-            <Image src={union} width={130} />
-          </AbsoluteWrapper>
-          <AbsoluteWrapper bottom="0" left="-60px">
-            <Image src={base} width={200} />
-          </AbsoluteWrapper>
-          <AbsoluteWrapper bottom="-130px" right="-160px">
-            <Image src={secondBase} width={400} />
-          </AbsoluteWrapper>
           <Shadow />
         </ImageWrapper>
       </LeftCol>

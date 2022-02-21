@@ -1,17 +1,27 @@
 import { FC } from 'react';
 import { RootState, useAppSelector } from '../../../../features/app/store';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 interface IOpen {
     open: boolean;
 }
+const up = keyframes`
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 0;
+  }
+`;
+
 const Wrapper = styled.div<IOpen>`
     display:  ${({ open }) => open ? 'block' : 'none'};
     position: absolute;
-    top: 0;
+    top: ${({ open }) => open ? '0' : '-100vh'};
+    animation: ${up} 0.3s linear 1;
     left: 0;
     background-color: #ffffff;
-    z-index: 3;
+    z-index: 7;
     width: 100%;
     height: 100%;
     padding: 10px;
@@ -28,11 +38,12 @@ const Link = styled.a`
     padding-right: 25px;
     font-size: 20px;
     text-decoration: none;
+    padding-top: 20px;
 
 `;
 
 export const ExtraSmallMenu: FC = () => {
-    const open = useAppSelector((state: RootState) => state.data.menuOpen)
+    const open = useAppSelector((state: RootState) => state.data.menuOpen);
 
 
     return (
