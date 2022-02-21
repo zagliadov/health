@@ -10,8 +10,13 @@ const { Title, Text } = Typography;
 
 
 const Wrapper = styled(Row)`
-  display: flex;
-  height: 100vh;
+display: flex;
+flex-direction: column;
+position: relative;
+justify-content: space-around;
+align-items: center;
+height: 100vh;
+width: 100%;
 `;
 const FirstCol = styled(Col)`
   display: flex;
@@ -81,7 +86,7 @@ export const FrontPage: FC = () => {
 
   return (
     <Wrapper>
-      <FirstCol xs={24} sm={24} md={24} lg={12} xl={12}>
+      {/* <FirstCol xs={24} sm={24} md={24} lg={12} xl={12}> */}
         <TextWrapper>
           <ModifiedTitel>
             Tula Health for vibrant life you deserve
@@ -97,7 +102,7 @@ export const FrontPage: FC = () => {
           </GetStartedButton>
           <LearnMoreButton type="link">Learn more</LearnMoreButton>
         </ButtonWrapper>
-      </FirstCol>
+      {/* </FirstCol> */}
     </Wrapper>
   );
 };
