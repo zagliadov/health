@@ -12,15 +12,12 @@ const { Title, Text } = Typography;
 const Wrapper = styled(Row)`
   display: flex;
   height: 100vh;
-`;
-const FirstCol = styled(Col)`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   padding: 10px;
   width: 100%;
-  height: auto;
 `;
 
 const TextWrapper = styled.div`
@@ -53,6 +50,9 @@ const GetStartedButton = styled(Button)`
   @media (min-width: 768px) {
     width: 30%;
   }
+  @media (min-width: 992px) {
+    width: 40%;
+  }
 `;
 const LearnMoreButton = styled(Button)`
   font-size: 20px;
@@ -81,7 +81,6 @@ export const FrontPage: FC = () => {
 
   return (
     <Wrapper>
-      <FirstCol xs={24} sm={24} md={24} lg={12} xl={12}>
         <TextWrapper>
           <ModifiedTitel>
             Tula Health for vibrant life you deserve
@@ -97,7 +96,6 @@ export const FrontPage: FC = () => {
           </GetStartedButton>
           <LearnMoreButton type="link">Learn more</LearnMoreButton>
         </ButtonWrapper>
-      </FirstCol>
     </Wrapper>
   );
 };
