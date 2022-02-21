@@ -109,6 +109,13 @@ const WatchVideoWrapper = styled.div`
   border-radius: 16px;
   width: 70%;
   height: 115px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  @media (max-width: 576px) {
+    height: 150px;
+  }
+  
 `;
 const ButtonWrapper = styled(Button)`
   width: 80px;
@@ -123,6 +130,10 @@ const ButtonWrapper = styled(Button)`
     background-position: center center;
     background-size: cover;
   }
+  @media (max-width: 576px) {
+    width: 70px;
+    height: 70px;
+  }
 `;
 
 const ModifiedCaretRightOutlined = styled(CaretRightOutlined)`
@@ -132,6 +143,9 @@ const ModifiedCaretRightOutlined = styled(CaretRightOutlined)`
 
 const TextWhatchVideo = styled(Text)`
   font-size: 22px;
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
 `;
 
 
