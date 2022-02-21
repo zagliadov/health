@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Layout } from "antd";
 import { Navigation } from "../Header/Navigation/Navigation";
 import { FrontPage } from "../FrontPage/FrontPage";
-import { HowItWorks } from "../HowItWorks/HowItWorks";
+import { Member } from "../Member/Member";
 import { AboutTula } from "../AboutTula/AboutTula";
 import styled from 'styled-components';
 import { ExtraSmallMenu } from '../Header/Menu/ExtraSmallMenu/ExtraSmallMenu';
@@ -36,7 +36,7 @@ export const App: FC = () => {
           :
           <>
             <FrontPage />
-            <HowItWorks />
+            <Member />
           </>
         }
 
