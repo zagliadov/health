@@ -31,7 +31,7 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 90%;
+  width: 70%;
   height: 100px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
   border-radius: 16px;
