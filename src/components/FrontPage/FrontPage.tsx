@@ -9,33 +9,22 @@ import { Row, Col, Typography, Button } from "antd";
 const { Title, Text } = Typography;
 
 const LeftCol = styled(Col)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 0px;
   text-align: center;
-  padding-top: 130px;
-  padding-left: 40px;
-  padding-right: 20px;
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-itmes: center;
-    padding-top: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 100vh;
-  }
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 100vh;
 `;
 const RightCol = styled(Col)`
-  padding-top: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding-top: 0px;
-    height: 100vh;
-  }
+  padding-top: 0px;
+  height: 100vh;
 `;
 
 const PageRow = styled(Row)`
@@ -69,18 +58,14 @@ const Shadow = styled.div`
 `;
 const GetStartedButton = styled(Button)`
   background-color: #000000;
-  @media (max-width: 768px) {
-    width: 70%;
-    font-size: 20px;
-    height: 50px;
-  }
+  width: 70%;
+  font-size: 25px;
+  height: 50px;
 `;
 const LearnMoreButton = styled(Button)`
-  @media (max-width: 768px) {
-    padding-top: 35px;
-    font-size: 20px;
-    height: 50px;
-  }
+  padding-top: 35px;
+  font-size: 24px;
+  height: 50px;
 `;
 const ImageWrapper = styled.div`
   width: 80%;
@@ -97,21 +82,18 @@ const ImageWrapper = styled.div`
   }
 `;
 const TextWrapper = styled(Text)`
-  @media (max-width: 768px) {
-    font-size: 22px;
-  }
+  font-size: 22px;
+  padding-bottom: 10px;
 `;
 const WatchVideoWrapper = styled.div`
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
   align-items: center;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
   border-radius: 16px;
   width: 70%;
   height: 115px;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
   @media (max-width: 576px) {
     height: 150px;
   }

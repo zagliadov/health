@@ -1,95 +1,79 @@
 import { FC } from "react";
 import { Row, Col, Typography, Button, Image } from "antd";
-import { CaretRightOutlined } from "@ant-design/icons";
+// import { CaretRightOutlined } from "@ant-design/icons";
 import styled from "styled-components";
-import base from "../../img/Base.png";
+import firstPic from '../../img/firstPic.png';
 
 
 const { Title, Text } = Typography;
 
-const LeftCol = styled(Col)`
-  padding-top: 30px;
-  padding-left: 40px;
+const Wrapper = styled(Row)`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-`;
-const RightCol = styled(Col)`
-  text-align: center;
-  padding-top: 130px;
-  padding-left: 20px;
-  padding-right: 30px;
+  height: 100vh;
 `;
 
-const MainTitle = styled(Title)`
+const LeftCol = styled(Col)`
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  padding-bottom: 40px;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+`;
+const RightCol = styled(Col)`
+  display: flex;
+  height: 50vh;
 `;
 
 const Shadow = styled.div`
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   position: absolute;
-  z-index: 0;
-  right: -100px;
-  bottom: -130px;
+  z-index: ;
+  right: 100px;
+  bottom: -80px;
   background: #06be53;
   opacity: 0.3;
   filter: blur(300px);
   transform: matrix(0.89, -0.39, 0.48, 0.91, 0, 0);
 `;
-
 const ImageWrapper = styled.div`
-  position: relative;
-  width: 80%;
-  height: 80%;
-  // background: url();
-  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background: url(${firstPic});
   background-position: center center;
+  background-size: contain;
+  position: relative;
   background-repeat: no-repeat;
+  @media (max-width: 768px) {
+    background-position: top;
+    height: 70%;
+  }
 `;
-
-const PlayVideoButton = styled(Button)`
-  background: #000000;
+const HowItWorksTitle = styled(Title)`
+  text-align: center;
 `;
-const ColForWatchVideoText = styled(Col)`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+const TextWrapper = styled(Text)`
+  width: 70%;
 `;
 
 export const HowItWorks: FC = () => {
   return (
-    <Row style={{ height: "100vh" }}>
-      <LeftCol span={12}>
-        <ImageWrapper>
-          <Shadow />
-        </ImageWrapper>
+    <Wrapper>
+      <LeftCol>
+        <Shadow />
+        <HowItWorksTitle>
+          How it works
+        </HowItWorksTitle>
+        <TextWrapper>
+          We combine state-of-the-art monitoring technology with 24/7 support and encouragement that engages members in changing their behaviors and improving their health while reducing their overall cost of care.
+        </TextWrapper>
       </LeftCol>
 
-      <RightCol span={12}>
-        <MainTitle>How it works</MainTitle>
-        <Text>
-          Tula Health combine state-of-art technology and service that support
-          you in your management and control of diabetes.
-        </Text>
-        <Row style={{ paddingTop: "40px" }}>
-          <Col span={12}>
-            <PlayVideoButton
-              size="large"
-              type="primary"
-              shape="circle"
-              icon={<CaretRightOutlined />}
-            />
-          </Col>
-          <ColForWatchVideoText span={12}>
-            <Text>Whatch the video</Text>
-          </ColForWatchVideoText>
-        </Row>
+      <RightCol>
+        <ImageWrapper />
       </RightCol>
-    </Row>
+    </Wrapper>
   );
 };
