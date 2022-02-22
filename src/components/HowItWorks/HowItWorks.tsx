@@ -1,21 +1,9 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 import { Row, Typography, Button } from 'antd';
-import secondPic from '../../img/secondPic.png';
 import { CaretRightOutlined } from "@ant-design/icons";
 
 const { Title, Text } = Typography;
-
-const ImageWrapper = styled.div`
-  width: 100%;
-  height: 60%;
-  position: relative;
-  z-index: 2;
-  background: url(${secondPic});
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat; 
-`;
 
 const Wrapper = styled(Row)`
   display: flex;
@@ -37,6 +25,7 @@ const ModifiedTitel = styled(Title)`
   font-weight: bold;
   line-height: 120%;
 `;
+
 const ModifiedText = styled(Text)`
   display: flex;  
   font-style: normal;

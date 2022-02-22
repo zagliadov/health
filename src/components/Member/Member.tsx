@@ -69,6 +69,7 @@ const ModifiedCaretRightOutlined = styled(CaretRightOutlined)`
   font-size: 33px;
   color: #ffffff;
 `;
+
 const Shadow = styled.div`
   width: 400px;
   height: 400px;

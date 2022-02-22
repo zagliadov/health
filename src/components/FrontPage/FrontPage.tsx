@@ -1,9 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import secondPic from "../../img/secondPic.png";
-import watchTheMember from '../../img/watchTheMember.png';
-import { CaretRightOutlined } from "@ant-design/icons";
-import { Row, Col, Typography, Button, Divider } from "antd";
+import { Row, Typography, Button } from "antd";
 
 
 const { Title, Text } = Typography;
