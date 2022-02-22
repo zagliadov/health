@@ -13,6 +13,9 @@ const Wrapper = styled(Row)`
   align-items: center;
   padding: 10px;
   width: 100%;
+  @media (min-width: 992px) {
+    height: 100vh;
+  }
 `;
 const ImageWrapper = styled.div`
   width: 100%;

@@ -26,6 +26,12 @@ const FrontPageWrapper = styled.div`
     flex-direction: row;
   }
 `;
+const HowItWorksWrapper = styled.div`
+  @media (min-width: 992px) {
+    display: flex;
+    flex-direction: row;
+  }
+`;
 
 
 export const App: FC = () => {
@@ -46,8 +52,11 @@ export const App: FC = () => {
             <Member />
           </FrontPageWrapper>
         }
-        <HowItWorks />
-        <HowItWorksImage />
+        <HowItWorksWrapper>
+          <HowItWorks />
+          {/* <HowItWorksImage /> */}
+        </HowItWorksWrapper>
+
 
 
       </Content>
