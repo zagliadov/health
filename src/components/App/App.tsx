@@ -47,15 +47,17 @@ export const App: FC = () => {
         {open ?
           <ExtraSmallMenu />
           :
-          <FrontPageWrapper>
-            <FrontPage />
-            <Member />
-          </FrontPageWrapper>
+          <>
+            <FrontPageWrapper>
+              <FrontPage />
+              <Member />
+            </FrontPageWrapper>
+            <HowItWorks />
+          </>
+
+
         }
-        <HowItWorksWrapper>
-          <HowItWorks />
-          {/* <HowItWorksImage /> */}
-        </HowItWorksWrapper>
+
 
 
 

@@ -75,7 +75,11 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-top: 20px;
   width: 70%;
+  @media (min-width: 768px) {
+    padding-top: 40px;
+  }
 `;
 
 const ModifiedCaretRightOutlined = styled(CaretRightOutlined)`
