@@ -4,6 +4,7 @@ import { Navigation } from "../Header/Navigation/Navigation";
 import { FrontPage } from "../FrontPage/FrontPage";
 import { Member } from "../Member/Member";
 import { AboutTula } from "../AboutTula/AboutTula";
+import { HowItWorks } from '../HowItWorks/HowItWorks';
 import styled from 'styled-components';
 import { ExtraSmallMenu } from '../Header/Menu/ExtraSmallMenu/ExtraSmallMenu';
 import { RootState, useAppSelector } from "../../features/app/store";
@@ -44,6 +45,7 @@ export const App: FC = () => {
             <Member />
           </FrontPageWrapper>
         }
+        <HowItWorks />
 
 
       </Content>
