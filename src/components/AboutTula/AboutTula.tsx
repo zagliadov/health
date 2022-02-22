@@ -4,22 +4,37 @@ import styled from "styled-components";
 import IconGenie from "../../img/IconGenie.png";
 import IconWatch from "../../img/IconWatch.png";
 import bigmen from '../../img/bigmen.png';
+import biggerBigman from '../../img/biggerBigman.png'
 
 
 const { Title, Text } = Typography;
 const { Panel } = Collapse;
 
-const LeftCol = styled(Col)`
-  text-align: center;
-  padding-top: 130px;
-  padding-left: 40px;
-  padding-right: 30px;
-`;
-const RightCol = styled(Col)`
-  padding-top: 30px;
+const Wrapper = styled(Row)`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  width: 100%;
+  height: 100vh;
+`;
+const TopCol = styled(Col)`
+  height: 50vh;
+  order: 1;
+  @media (min-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    order: 1;
+  }
+`;
+const BottomCol = styled(Col)`
+  height: 50vh;
+  order: 2;
+  @media (min-width: 992px) {
+    height: 100vh;
+    order: 2;
+  }
 `;
 const MainTitle = styled(Title)`
   display: flex;
@@ -58,15 +73,21 @@ const CardFooter = styled.div`
   width: 70%;
   padding-top: 25px;
 `;
-const ImageWrapper = styled.div`
-  width: 80%;
-  height: 100%;
-  background: url(${bigmen});
+const ImageAboutTula = styled.div`
+width: 100%;
+height: 100%;
+position: relative;
+z-index: 3;
+background: url(${bigmen});
+background-position: center center;
+background-size: contain;
+background-repeat: no-repeat; 
+@media (min-width: 768px) {
+  background: url(${biggerBigman});
+  background-repeat: no-repeat; 
   background-position: center center;
   background-size: contain;
-  position: relative;
-  z-index: 1;
-  background-repeat: no-repeat;
+}
 `;
 const Shadow = styled.div`
   width: 400px;
@@ -97,8 +118,8 @@ export const AboutTula: FC = () => {
   };
 
   return (
-    <Row style={{ height: "100vh" }}>
-      <LeftCol span={12}>
+    <Wrapper>
+      <TopCol xs={24} sm={24} md={24} lg={12}>
         <MainTitle>About Tula</MainTitle>
 
         <Collapse defaultActiveKey={["1"]} expandIconPosition="right" ghost>
@@ -125,11 +146,11 @@ export const AboutTula: FC = () => {
             <Text>Learn more</Text>
           </Button>
         </CardFooter>
-      </LeftCol>
-      <RightCol span={12}>
+      </TopCol>
+      <BottomCol xs={24} sm={24} md={24} lg={12}>
+        <ImageAboutTula />
         <Shadow />
-        <ImageWrapper />
-      </RightCol>
-    </Row>
+      </BottomCol>
+    </Wrapper>
   );
 };

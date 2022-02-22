@@ -8,7 +8,6 @@ import { HowItWorks } from '../HowItWorks/HowItWorks';
 import styled from 'styled-components';
 import { ExtraSmallMenu } from '../Header/Menu/ExtraSmallMenu/ExtraSmallMenu';
 import { RootState, useAppSelector } from "../../features/app/store";
-import { HowItWorksImage } from '../HowItWorksImage/HowItWorksImage';
 
 const { Header, Footer, Content } = Layout;
 
@@ -53,6 +52,7 @@ export const App: FC = () => {
               <Member />
             </FrontPageWrapper>
             <HowItWorks />
+            <AboutTula />
           </>
 
 
