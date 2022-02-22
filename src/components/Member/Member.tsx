@@ -21,6 +21,8 @@ const Wrapper = styled(Row)`
 const ImageWrapper = styled.div`
   width: 100%;
   height: 60%;
+  position: relative;
+  z-index: 2;
   background: url(${grand});
   background-position: center center;
   background-size: contain;
@@ -31,8 +33,10 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 90%;
+  width: 70%;
   height: 100px;
+  position: relative;
+  z-index: 3;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
   border-radius: 16px;
   @media (min-width: 768px) {
@@ -65,11 +69,31 @@ const ModifiedCaretRightOutlined = styled(CaretRightOutlined)`
   font-size: 33px;
   color: #ffffff;
 `;
+const Shadow = styled.div`
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  z-index: 1;
+  right: 230px;
+  top: 230px;
+  background: #00A3D2;
+  opacity: 0.4;
+  filter: blur(100px);
+  transform: rotate(-25.73deg);
+  @media (min-width: 768px) {
+    right: 300px;
+    top: 400px;
+  }
+  @media (min-width: 992px) {
+    opacity: 0.1;
+  }
+`;
 
 export const Member: FC = () => {
   return (
     <Wrapper>
       <ImageWrapper />
+      <Shadow />
       <ButtonWrapper>
         <VideoButton shape="circle" size="large">
           <ModifiedCaretRightOutlined />

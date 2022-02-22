@@ -10,22 +10,14 @@ const { Title, Text } = Typography;
 
 
 const Wrapper = styled(Row)`
-display: flex;
-flex-direction: column;
-position: relative;
-justify-content: space-around;
-align-items: center;
-height: 100vh;
-width: 100%;
-`;
-const FirstCol = styled(Col)`
+  display: flex;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   padding: 10px;
   width: 100%;
-  height: auto;
 `;
 
 const TextWrapper = styled.div`
@@ -58,6 +50,9 @@ const GetStartedButton = styled(Button)`
   @media (min-width: 768px) {
     width: 30%;
   }
+  @media (min-width: 992px) {
+    width: 40%;
+  }
 `;
 const LearnMoreButton = styled(Button)`
   font-size: 20px;
@@ -78,15 +73,25 @@ const ButtonWrapper = styled.div`
     justify-content: flex-start;
     padding-left: 20px;
   }
-
 `;
 
+const Shadow = styled.div`
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  z-index: 0;
+  right: 230px;
+  top: 230px;
+  background: #06be53;
+  opacity: 0.8;
+  filter: blur(300px);
+  transform: matrix(0.89, -0.39, 0.48, 0.91, 0, 0);
+`;
 
 export const FrontPage: FC = () => {
 
   return (
     <Wrapper>
-      {/* <FirstCol xs={24} sm={24} md={24} lg={12} xl={12}> */}
         <TextWrapper>
           <ModifiedTitel>
             Tula Health for vibrant life you deserve
@@ -94,6 +99,7 @@ export const FrontPage: FC = () => {
           <ModifiedText>
             Tula Health combine state-of-art technology and service that support you in your management and control of diabetes.
           </ModifiedText>
+          <Shadow />
         </TextWrapper>
 
         <ButtonWrapper>
@@ -102,7 +108,6 @@ export const FrontPage: FC = () => {
           </GetStartedButton>
           <LearnMoreButton type="link">Learn more</LearnMoreButton>
         </ButtonWrapper>
-      {/* </FirstCol> */}
     </Wrapper>
   );
 };
