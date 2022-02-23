@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import { ExtraSmallMenu } from '../Header/Menu/ExtraSmallMenu/ExtraSmallMenu';
 import { RootState, useAppSelector } from "../../features/app/store";
 import { MedicalSupport } from '../MedicalSupport/MedicalSupport';
+import { Benefits } from "../Benefits/Benefits";
 
 const { Header, Footer, Content } = Layout;
 
@@ -26,12 +27,7 @@ const FrontPageWrapper = styled.div`
     flex-direction: row;
   }
 `;
-const HowItWorksWrapper = styled.div`
-  @media (min-width: 992px) {
-    display: flex;
-    flex-direction: row;
-  }
-`;
+
 
 
 export const App: FC = () => {
@@ -55,6 +51,7 @@ export const App: FC = () => {
             <HowItWorks />
             <AboutTula />
             <MedicalSupport />
+            <Benefits />
           </>
 
 

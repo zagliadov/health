@@ -19,6 +19,8 @@ const Wrapper = styled(Row)`
   display: flex;
   justify-content: space-around;
   padding: 10px;
+  background-color: #EEF1F4;
+  opacity: 0.9;
   width: 100%;
   height: 100%;
 `;
@@ -56,14 +58,14 @@ const BottomCol = styled(Col)`
     order: 1;
   }
 `;
-const LeftFotoCol = styled(Col)`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-`;
-const RightFotoCol = styled(Col)`
+// const LeftFotoCol = styled(Col)`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-end;
+// `;
+// const RightFotoCol = styled(Col)`
   
-`;
+// `;
 
 const TextWrapper = styled.div`
     padding: 10px;
@@ -102,35 +104,35 @@ const ButtonText = styled(Text)`
   font-size: 24px;
   color: #ffffff;
 `;
-interface IImage {
-    card: string;
-    smCard: string;
-    width: number;
-    smWidth: number;
-    smHeight: number;
-    height: number;
-}
-const Image = styled.div<IImage>`
-    width: ${({ width }) => width && width}px;
-    height: ${({ height }) => height && height}px;
-    background: url(${({ card }) => card && card});
-    background-size: initial;
-    background-repeat: no-repeat;
-    @media (min-width: 768px) {
-        width: ${({ smWidth }) => smWidth && smWidth}px;
-        height: ${({ smHeight }) => smHeight && smHeight}px;
-        background: url(${({ smCard }) => smCard && smCard});
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    @media (min-width: 992px) {
-        width: ${({ smWidth }) => smWidth && smWidth}px;
-        height: ${({ smHeight }) => smHeight && smHeight}px;
-        background: url(${({ smCard }) => smCard && smCard});
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-`;
+// interface IImage {
+//     card: string;
+//     smCard: string;
+//     width: number;
+//     smWidth: number;
+//     smHeight: number;
+//     height: number;
+// }
+// const Image = styled.div<IImage>`
+//     width: ${({ width }) => width && width}px;
+//     height: ${({ height }) => height && height}px;
+//     background: url(${({ card }) => card && card});
+//     background-size: initial;
+//     background-repeat: no-repeat;
+//     @media (min-width: 768px) {
+//         width: ${({ smWidth }) => smWidth && smWidth}px;
+//         height: ${({ smHeight }) => smHeight && smHeight}px;
+//         background: url(${({ smCard }) => smCard && smCard});
+//         background-size: cover;
+//         background-repeat: no-repeat;
+//     }
+//     @media (min-width: 992px) {
+//         width: ${({ smWidth }) => smWidth && smWidth}px;
+//         height: ${({ smHeight }) => smHeight && smHeight}px;
+//         background: url(${({ smCard }) => smCard && smCard});
+//         background-size: cover;
+//         background-repeat: no-repeat;
+//       }
+// `;
 
 const XsImage = styled.div`
   width: 100%;
