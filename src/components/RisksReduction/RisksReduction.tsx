@@ -7,6 +7,7 @@ import diagram3 from '../../img/diagram/diagram3.png';
 import diagram4 from '../../img/diagram/diagram4.png';
 import diagram5 from '../../img/diagram/diagram5.png';
 import diagram6 from '../../img/diagram/diagram6.png';
+import diagramInv from '../../img/diagram/diagramInv.png';
 
 
 const { Title, Text } = Typography;
@@ -45,10 +46,26 @@ const DiagramItem = styled.div`
     align-items: center;
     justify-content: flex-start;
     width: 352px;
+    padding-left: 10px;
+    margin-top: 20px;
     height: 147px;
     box-shadow: 4px 8px 24px rgba(0, 0, 0, 0.04);
     border-radius: 24px;
 `;
+const DiagramItemAccent = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+    width: 352px;
+    margin-top: 20px;
+    height: 147px;
+    box-shadow: 4px 8px 24px rgba(0, 0, 0, 0.04);
+    background-color: #06BE53;
+    border-radius: 24px;
+`;
+
+const ImageAccent = styled(Image)``;
 const DiagramPercent = styled.div`
     display: flex;
     flex-direction: column;
@@ -94,13 +111,13 @@ export const RisksReduction: FC = () => {
                     </DiagramPercent>
                 </DiagramItem>
 
-                <DiagramItem>
-                    <Image src={diagram4} preview={false} />
+                <DiagramItemAccent>
+                    <ImageAccent src={diagramInv} preview={false} />
                     <DiagramPercent>
-                        <Percent level={1}>34%</Percent>
-                        <Risk>Reduction in amputation</Risk>
+                        <Percent level={1} style={{color: '#ffffff'}}>34%</Percent>
+                        <Risk style={{color: '#ffffff'}}>Reduction in amputation</Risk>
                     </DiagramPercent>
-                </DiagramItem>
+                </DiagramItemAccent>
 
                 <DiagramItem>
                     <Image src={diagram4} preview={false} />
