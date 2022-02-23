@@ -1,16 +1,17 @@
 import { FC } from 'react';
 import styled from "styled-components";
 import { Row, Typography, Col, Button } from "antd";
-import xsCard1 from '../../img/medicalSupport/xs/Card1.png';
-import xsCard2 from '../../img/medicalSupport/xs/Card2.png';
-import xsCard3 from '../../img/medicalSupport/xs/Card3.png';
-import xsCard4 from '../../img/medicalSupport/xs/Card4.png';
-//
-import smCard1 from '../../img/medicalSupport/md/Card1.png';
-import smCard2 from '../../img/medicalSupport/md/Card2.png';
-import smCard3 from '../../img/medicalSupport/md/Card3.png';
-import smCard4 from '../../img/medicalSupport/md/Card4.png';
+// import xsCard1 from '../../img/medicalSupport/xs/Card1.png';
+// import xsCard2 from '../../img/medicalSupport/xs/Card2.png';
+// import xsCard3 from '../../img/medicalSupport/xs/Card3.png';
+// import xsCard4 from '../../img/medicalSupport/xs/Card4.png';
+// //
+// import smCard1 from '../../img/medicalSupport/md/Card1.png';
+// import smCard2 from '../../img/medicalSupport/md/Card2.png';
+// import smCard3 from '../../img/medicalSupport/md/Card3.png';
+// import smCard4 from '../../img/medicalSupport/md/Card4.png';
 import xsCard from '../../img/xsCard.png';
+import mdCard from '../../img/mdCard.png';
 
 const { Title, Text } = Typography;
 
@@ -47,6 +48,7 @@ const BottomCol = styled(Col)`
   height: 50vh;
   order: 2;
   @media (min-width: 768px) {
+    padding-top: 100px;
     height: 100vh
   }
   @media (min-width: 992px) {
@@ -72,6 +74,9 @@ const ModifiedTitel = styled(Title)`
   font-style: normal;
   font-weight: bold;
   line-height: 120%;
+  @media (max-width: 576px) {
+    text-align: center;
+  }
 `;
 
 const ModifiedText = styled(Text)`
@@ -128,11 +133,24 @@ const Image = styled.div<IImage>`
 `;
 
 const XsImage = styled.div`
+  width: 100%;
+  height: 100%;
+  background: url(${xsCard});
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @media (max-width: 576px) {
+    width: 100%;
+    height: 85%;
+  }
+  @media (min-width: 768px) {
     width: 100%;
     height: 100%;
-    background: url(${xsCard});
+    background: url(${mdCard});
+    background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
+  }
 `;
 
 export const MedicalSupport: FC = () => {

@@ -20,6 +20,12 @@ const Wrapper = styled(Row)`
 const TopCol = styled(Col)`
   height: 50vh;
   order: 1;
+  @media (max-width: 576px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
   @media (min-width: 992px) {
     display: flex;
     flex-direction: column;
@@ -31,6 +37,9 @@ const TopCol = styled(Col)`
 const BottomCol = styled(Col)`
   height: 50vh;
   order: 2;
+  @media (max-width: 576px) {
+    display: none;
+  }
   @media (min-width: 992px) {
     height: 100vh;
     order: 2;
@@ -63,6 +72,10 @@ const MyPanel = styled(Panel)`
   padding-top: 20px;
   padding-left: 40px;
   text-align: start;
+  @media (max-width: 576px) {
+    width: 100%;
+    padding-left: 10px;
+  }
 `;
 const GetStartedButton = styled(Button)`
   background: #000000;
@@ -70,24 +83,27 @@ const GetStartedButton = styled(Button)`
 const CardFooter = styled.div`
   display: flex;
   justify-content: space-around;
-  width: 70%;
-  padding-top: 25px;
+  width: 100%;
+  padding-top: 15px;
+  @media (max-width: 576px) {
+    padding-top: 100px;
+  }
 `;
 const ImageAboutTula = styled.div`
-width: 100%;
-height: 100%;
-position: relative;
-z-index: 3;
-background: url(${bigmen});
-background-position: center center;
-background-size: contain;
-background-repeat: no-repeat; 
-@media (min-width: 768px) {
-  background: url(${biggerBigman});
-  background-repeat: no-repeat; 
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+  background: url(${bigmen});
   background-position: center center;
   background-size: contain;
-}
+  background-repeat: no-repeat; 
+  @media (min-width: 768px) {
+    background: url(${biggerBigman});
+    background-repeat: no-repeat; 
+    background-size: contain;
+    background-position: center center;
+  }
 `;
 const Shadow = styled.div`
   width: 400px;

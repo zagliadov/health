@@ -43,6 +43,9 @@ const ModifiedTitel = styled(Title)`
   font-style: normal;
   font-weight: bold;
   line-height: 120%;
+  @media (max-width: 576px) {
+    text-align: center;
+  }
 `;
 
 const ModifiedText = styled(Text)`
@@ -78,7 +81,7 @@ const ButtonWrapper = styled.div`
   padding-top: 20px;
   width: 70%;
   @media (min-width: 768px) {
-    padding-top: 40px;
+    padding-top: 10px;
   }
 `;
 
