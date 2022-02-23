@@ -11,6 +11,7 @@ import { RootState, useAppSelector } from "../../features/app/store";
 import { MedicalSupport } from '../MedicalSupport/MedicalSupport';
 import { Benefits } from "../Benefits/Benefits";
 import { RisksReduction } from "../RisksReduction/RisksReduction";
+import { SaveMoney } from '../SaveMoney/SaveMoney';
 
 const { Header, Footer, Content } = Layout;
 
@@ -54,6 +55,7 @@ export const App: FC = () => {
             <MedicalSupport />
             <Benefits />
             <RisksReduction />
+            <SaveMoney />
           </>
 
 
