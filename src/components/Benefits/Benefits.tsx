@@ -7,19 +7,23 @@ const { Title, Text } = Typography;
 
 const Wrapper = styled(Row)`
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: auto;
 `;
 const ModifiedCol = styled(Col)`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
 `;
 
 const ModifiedTitle = styled(Title)`
-
+    padding-top: 20px;
 `;
+
 const ModifiedText = styled(Text)`
     width: 85%;
     text-align: center;
@@ -30,6 +34,10 @@ const OptionWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    width: 250px;
+    height: auto;
 `;
 
 interface IImage {
@@ -49,7 +57,7 @@ export const Benefits: FC = () => {
     return (
         <Wrapper>
             <ModifiedTitle>Benefits</ModifiedTitle>
-            <ModifiedCol xs={24}>
+            <ModifiedCol xs={24} sm={12}>
                 <OptionWrapper>
                     <OptionImage image={bloodSugar} />
                     <ModifiedTitle level={5}>Blood Sugar</ModifiedTitle>
