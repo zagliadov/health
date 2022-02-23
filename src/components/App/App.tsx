@@ -10,6 +10,7 @@ import { ExtraSmallMenu } from '../Header/Menu/ExtraSmallMenu/ExtraSmallMenu';
 import { RootState, useAppSelector } from "../../features/app/store";
 import { MedicalSupport } from '../MedicalSupport/MedicalSupport';
 import { Benefits } from "../Benefits/Benefits";
+import { RisksReduction } from "../RisksReduction/RisksReduction";
 
 const { Header, Footer, Content } = Layout;
 
@@ -52,6 +53,7 @@ export const App: FC = () => {
             <AboutTula />
             <MedicalSupport />
             <Benefits />
+            <RisksReduction />
           </>
 
 
