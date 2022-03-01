@@ -1,8 +1,8 @@
 import { FC } from "react";
 import styled from "styled-components";
 import { Row, Typography, Col, Divider, Image } from "antd";
-import plus from '../../img/Plus2.png';
-import minus from '../../img/Minus2.png';
+import plus from "../../img/Plus2.png";
+import minus from "../../img/Minus2.png";
 
 const { Text, Title } = Typography;
 
@@ -11,27 +11,27 @@ const Wrapper = styled(Row)`
   padding-top: 40px;
   padding-left: 10px;
   padding-right: 10px;
+  @media (min-width: 992px) {
+    padding-top: 0px;
+  }
 `;
 
 const TopCol = styled(Col)`
-  height: 50vh;
-  order: 1;
+  height: auto;
   @media (min-width: 992px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    order: 2;
   }
 `;
 const BottomCol = styled(Col)`
-  border: 1px solid red;
+  padding-top: 40px;
+  padding-bottom: 20px;
   width: 100%;
-  height: 50vh;
-  order: 2;
+  height: auto;
   @media (min-width: 992px) {
     height: 100vh;
-    order: 1;
   }
 `;
 
@@ -52,6 +52,9 @@ const WhyUsButton = styled.button`
   border-radius: 16px;
   border: none;
   font-size: 17px;
+  @media (min-width: 992px) {
+    margin-left: 40px;
+  }
 `;
 
 const Shadow = styled.div`
@@ -67,17 +70,20 @@ const Shadow = styled.div`
 `;
 
 const OptionWrapper = styled.div`
-  border: 1px solid black;
+  padding-top: 20px;
+  padding-bottom: 20px;
 `;
 
 const OptionItem = styled.div`
   display: flex;
   justify-content: space-around;
+  padding-top: 40px;
 `;
 
-const OptionName = styled(Text)``;
+const OptionName = styled(Text)`
+
+`;
 const OptionLeft = styled.div`
-  border: 1px solid red;
   width: 30%;
 `;
 
@@ -85,7 +91,6 @@ const OptionCenter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid green;
   width: 30%;
 `;
 
@@ -93,14 +98,13 @@ const OptionRight = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
   width: 30%;
 `;
 
 export const WhyUs: FC = () => {
   return (
     <Wrapper>
-      <TopCol>
+      <TopCol xs={24} sm={24} md={24} lg={8}>
         <Title>Why us</Title>
         <Text>
           Tula provides personalized population health management. Tula
@@ -114,7 +118,7 @@ export const WhyUs: FC = () => {
         </Text>
       </TopCol>
 
-      <BottomCol>
+      <BottomCol xs={24} sm={24} md={24} lg={16}>
         <ButtonWrapper>
           <WhyUsButton style={{ background: "#00A3D2", color: "#ffffff" }}>
             Tula Health Programs
@@ -125,7 +129,7 @@ export const WhyUs: FC = () => {
         <OptionWrapper>
           <OptionItem>
             <OptionLeft>
-              <OptionName>Human onboarding</OptionName>
+              <OptionName strong>Human onboarding</OptionName>
             </OptionLeft>
             <OptionCenter>
               <Image src={plus} preview={false} />
@@ -134,6 +138,69 @@ export const WhyUs: FC = () => {
               <Image src={minus} preview={false} />
             </OptionRight>
           </OptionItem>
+
+          <OptionItem>
+            <OptionLeft>
+              <OptionName strong>Real-Time Biometrics</OptionName>
+            </OptionLeft>
+            <OptionCenter>
+              <Image src={plus} preview={false} />
+            </OptionCenter>
+            <OptionRight>
+              <Image src={plus} preview={false} />
+            </OptionRight>
+          </OptionItem>
+
+          <OptionItem>
+            <OptionLeft>
+              <OptionName strong>24/7 Bidirectional Communication</OptionName>
+            </OptionLeft>
+            <OptionCenter>
+              <Image src={plus} preview={false} />
+            </OptionCenter>
+            <OptionRight>
+              <Image src={minus} preview={false} />
+            </OptionRight>
+          </OptionItem>
+
+          <OptionItem>
+            <OptionLeft>
+              <OptionName strong>Proactive Outreach</OptionName>
+            </OptionLeft>
+            <OptionCenter>
+              <Image src={plus} preview={false} />
+            </OptionCenter>
+            <OptionRight>
+              <Image src={minus} preview={false} />
+            </OptionRight>
+          </OptionItem>
+
+          <OptionItem>
+            <OptionLeft>
+              <OptionName strong>Aligned Personal Support Team</OptionName>
+            </OptionLeft>
+            <OptionCenter>
+              <Image src={plus} preview={false} />
+            </OptionCenter>
+            <OptionRight>
+              <Image src={minus} preview={false} />
+            </OptionRight>
+          </OptionItem>
+
+          <OptionItem>
+            <OptionLeft>
+              <OptionName strong>Incentive Programs</OptionName>
+            </OptionLeft>
+            <OptionCenter>
+              <Image src={plus} preview={false} />
+            </OptionCenter>
+            <OptionRight>
+              <Image src={minus} preview={false} />
+            </OptionRight>
+          </OptionItem>
+
+
+
         </OptionWrapper>
       </BottomCol>
     </Wrapper>
