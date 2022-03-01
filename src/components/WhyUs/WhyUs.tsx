@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Row, Typography, Col, Divider, Image } from "antd";
 import plus from "../../img/Plus2.png";
 import minus from "../../img/Minus2.png";
+import arrow from '../../img/WhyUsArrow.png';
 
 const { Text, Title } = Typography;
 
@@ -104,6 +105,11 @@ const OptionRight = styled.div`
   width: 30%;
 `;
 
+const ArrowWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
 export const WhyUs: FC = () => {
   return (
     <Wrapper>
@@ -202,6 +208,10 @@ export const WhyUs: FC = () => {
             </OptionRight>
           </OptionItem>
         </OptionWrapper>
+
+        <ArrowWrapper>
+          <Image src={arrow} preview={false} />
+        </ArrowWrapper>
       </BottomCol>
     </Wrapper>
   );
