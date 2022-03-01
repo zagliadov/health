@@ -57,15 +57,18 @@ const WhyUsButton = styled.button`
   }
 `;
 
-const Shadow = styled.div`
+interface IShadow {
+  top: number;
+}
+const Shadow = styled.div<IShadow>`
   position: absolute;
-  top: 0;
+  top: ${({top}) => top && top}px;
   z-index: 2;
   width: 300px;
   height: 300px;
   background: #00a3d2;
   opacity: 0.3;
-  filter: blur(100px);
+  filter: blur(200px);
   transform: rotate(-25.73deg);
 `;
 
@@ -110,7 +113,7 @@ export const WhyUs: FC = () => {
           Tula provides personalized population health management. Tula
           understands that everyone's story and jorney ara different.
         </Text>
-        <Shadow />
+        <Shadow top={0} />
         <Divider />
         <Text>
           Because each member is unique, Tula builds a personalized support team
@@ -186,7 +189,7 @@ export const WhyUs: FC = () => {
               <Image src={minus} preview={false} />
             </OptionRight>
           </OptionItem>
-
+          <Shadow top={400}/>
           <OptionItem>
             <OptionLeft>
               <OptionName strong>Incentive Programs</OptionName>
@@ -198,9 +201,6 @@ export const WhyUs: FC = () => {
               <Image src={minus} preview={false} />
             </OptionRight>
           </OptionItem>
-
-
-
         </OptionWrapper>
       </BottomCol>
     </Wrapper>
