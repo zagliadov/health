@@ -10,6 +10,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   @media (min-width: 768px) {
+    align-items: center;
   }
 `;
 
@@ -19,20 +20,19 @@ const ReviewsTitle = styled(Title)`
 `;
 
 const CarouselWrapper = styled(Carousel)`
-  display: flex;
   position: relative;
   z-index: 1;
   padding: 20px;
-  border: 1px solid red;
   @media (min-width: 768px) {
-    border: 1px solid green;
-    width: 60%;
+    width: 450px;
+  }
+  @media (min-width: 992px) {
+    width: 650px;
   }
 `;
 
 const CarouselItem = styled.div`
   box-shadow: 4px 8px 24px rgba(11, 16, 65, 0.04);
-  width: 90%;
   border-radius: 24px;
   padding-top: 30px;
   height: 230px;
