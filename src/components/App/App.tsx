@@ -13,6 +13,7 @@ import { Benefits } from "../Benefits/Benefits";
 import { RisksReduction } from "../RisksReduction/RisksReduction";
 import { SaveMoney } from '../SaveMoney/SaveMoney';
 import { Reviews } from '../Reviews/Reviews';
+import { WhyUs } from '../WhyUs/WhyUs';
 
 const { Header, Footer, Content } = Layout;
 
@@ -58,6 +59,7 @@ export const App: FC = () => {
             <RisksReduction />
             <SaveMoney />
             <Reviews />
+            <WhyUs />
           </>
 
 
