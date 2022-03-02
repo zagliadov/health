@@ -22,6 +22,20 @@ const BottomCol = styled(Col)`
   order: 2;
 `;
 
+const InputName = styled(Text)`
+  position: absolute;
+  margin-left: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: #ffffff;
+  z-index: 3;
+`;
+
+const ContactInput = styled(Input)`
+  border-radius: 60px;
+  padding: 20px;
+`;
+
 export const Contact: FC = () => {
   const onFinish = (values: any) => {
     console.log("Success:", values);
@@ -46,14 +60,15 @@ export const Contact: FC = () => {
           onFinishFailed={onFinishFailed}
           autoComplete="off"
         >
+          <InputName strong>
+            Name
+          </InputName>
           <Form.Item
-            label="name"
             name="name"
-            style={{border: '1px solid black'}}
+            style={{ paddingTop: "10px" }}
             rules={[{ required: true, message: "Please input your name!" }]}
           >
-            <Input style={{borderRadius: '20px',
-          padding: '20px'}}/>
+            <ContactInput />
           </Form.Item>
           <Form.Item
             name={["user", "email"]}
