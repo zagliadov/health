@@ -14,6 +14,7 @@ import { RisksReduction } from "../RisksReduction/RisksReduction";
 import { SaveMoney } from '../SaveMoney/SaveMoney';
 import { Reviews } from '../Reviews/Reviews';
 import { WhyUs } from '../WhyUs/WhyUs';
+import { Contact } from '../Contact/Contact';
 
 const { Header, Footer, Content } = Layout;
 
@@ -60,6 +61,7 @@ export const App: FC = () => {
             <SaveMoney />
             <Reviews />
             <WhyUs />
+            <Contact />
           </>
 
 

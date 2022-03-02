@@ -108,6 +108,9 @@ const OptionRight = styled.div`
 const ArrowWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
+  @media (min-width: 992px) {
+    justify-content: center;
+  }
 `;
 
 export const WhyUs: FC = () => {
