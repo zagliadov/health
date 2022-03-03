@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { Row, Col, Typography, Form, Input, Button } from "antd";
+import { Row, Col, Divider, Typography, Form, Input, Button } from "antd";
 
 const { Text, Title } = Typography;
 const Wrapper = styled(Row)`
@@ -31,9 +31,24 @@ const InputName = styled(Text)`
   z-index: 3;
 `;
 
+const ContactForm = styled(Form)`
+  padding-top: 20px;
+`;
+
 const ContactInput = styled(Input)`
   border-radius: 60px;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+`;
+
+const SendButton = styled(Button)`
+  height: 60px;
+  width: 90%;
+`;
+const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 export const Contact: FC = () => {
@@ -51,7 +66,7 @@ export const Contact: FC = () => {
         <Title level={2}>Contact us</Title>
         <Text>Fill out the form below so we can tell you more about Tula</Text>
 
-        <Form
+        <ContactForm
           name="basic"
           labelCol={{ span: 8 }}
           wrapperCol={{ span: 16 }}
@@ -60,33 +75,41 @@ export const Contact: FC = () => {
           onFinishFailed={onFinishFailed}
           autoComplete="off"
         >
-          <InputName strong>
-            Name
-          </InputName>
+          <InputName strong>Name</InputName>
           <Form.Item
             name="name"
             style={{ paddingTop: "10px" }}
             rules={[{ required: true, message: "Please input your name!" }]}
           >
-            <ContactInput />
-          </Form.Item>
-          <Form.Item
-            name={["user", "email"]}
-            label="Email"
-            rules={[{ type: "email" }]}
-          >
-            <Input />
+            <ContactInput placeholder="Merry Colin" />
           </Form.Item>
 
+          <InputName strong>Email</InputName>
           <Form.Item
-            label="Phone"
-            name="Phone"
-            rules={[{ required: true, message: "Please input your name!" }]}
+            name={["user", "email"]}
+            style={{ paddingTop: "10px" }}
+            rules={[{ type: "email" }]}
           >
-            <Input />
+            <ContactInput placeholder="merry.colin@gmail.com" />
           </Form.Item>
-        </Form>
+
+          <InputName strong>Phone</InputName>
+          <Form.Item
+            style={{ paddingTop: "10px" }}
+            name="Phone"
+            rules={[
+              { required: true, message: "Please input your phone number!" },
+            ]}
+          >
+            <ContactInput placeholder="+8( )" />
+          </Form.Item>
+          <Divider />
+          <ButtonWrapper>
+            <SendButton shape="round">Send</SendButton>
+          </ButtonWrapper>
+        </ContactForm>
       </TopCol>
+
       <BottomCol></BottomCol>
     </Wrapper>
   );
