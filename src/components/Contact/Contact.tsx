@@ -1,6 +1,8 @@
 import { FC } from "react";
 import styled from "styled-components";
 import { Row, Col, Divider, Typography, Form, Input, Button } from "antd";
+import contactImg from "../../img/contact.png";
+import bigContact from "../../img/bigContact.png";
 
 const { Text, Title } = Typography;
 const Wrapper = styled(Row)`
@@ -14,12 +16,28 @@ const Wrapper = styled(Row)`
 const TopCol = styled(Col)`
   display: flex;
   flex-direction: column;
+  align-items: center;
   order: 1;
+  @media (min-width: 768px) {
+    margin: 0 auto;
+    align-items: center;
+    width: 60%;
+  }
+  @media (min-width: 992px) {
+    order: 2;
+    border: 1px solid red;
+    width: auto;
+  }
 `;
 const BottomCol = styled(Col)`
+  padding-top: 30px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   order: 2;
+  @media (min-width: 992px) {
+    order: 1;
+  }
 `;
 
 const InputName = styled(Text)`
@@ -33,9 +51,12 @@ const InputName = styled(Text)`
 
 const ContactForm = styled(Form)`
   padding-top: 20px;
+  @media (min-width: 768px) {
+  }
 `;
 
 const ContactInput = styled(Input)`
+  width: 400px;
   border-radius: 60px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -51,6 +72,30 @@ const ButtonWrapper = styled.div`
   justify-content: center;
 `;
 
+const ContactImage = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+  background: url(${contactImg});
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @media (min-width: 768px) {
+    background: url(${bigContact});
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  @media (min-width: 992px) {
+    order: 1;
+    background: url(${contactImg});
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+`;
+
 export const Contact: FC = () => {
   const onFinish = (values: any) => {
     console.log("Success:", values);
@@ -62,7 +107,7 @@ export const Contact: FC = () => {
 
   return (
     <Wrapper>
-      <TopCol>
+      <TopCol xs={24} sm={24} md={24} lg={12}>
         <Title level={2}>Contact us</Title>
         <Text>Fill out the form below so we can tell you more about Tula</Text>
 
@@ -110,7 +155,9 @@ export const Contact: FC = () => {
         </ContactForm>
       </TopCol>
 
-      <BottomCol></BottomCol>
+      <BottomCol >
+        <ContactImage />
+      </BottomCol>
     </Wrapper>
   );
 };
