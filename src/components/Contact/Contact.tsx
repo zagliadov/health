@@ -12,6 +12,9 @@ const Wrapper = styled(Row)`
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 20px;
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
 `;
 const TopCol = styled(Col)`
   display: flex;
@@ -25,8 +28,7 @@ const TopCol = styled(Col)`
   }
   @media (min-width: 992px) {
     order: 2;
-    border: 1px solid red;
-    width: auto;
+    justify-content: center;
   }
 `;
 const BottomCol = styled(Col)`
@@ -51,8 +53,6 @@ const InputName = styled(Text)`
 
 const ContactForm = styled(Form)`
   padding-top: 20px;
-  @media (min-width: 768px) {
-  }
 `;
 
 const ContactInput = styled(Input)`
@@ -74,7 +74,7 @@ const ButtonWrapper = styled.div`
 
 const ContactImage = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative;
   z-index: 3;
   background: url(${contactImg});
@@ -88,7 +88,6 @@ const ContactImage = styled.div`
     background-repeat: no-repeat;
   }
   @media (min-width: 992px) {
-    order: 1;
     background: url(${contactImg});
     background-position: center center;
     background-size: contain;
@@ -155,7 +154,7 @@ export const Contact: FC = () => {
         </ContactForm>
       </TopCol>
 
-      <BottomCol >
+      <BottomCol xs={24} sm={24} md={24} lg={12}>
         <ContactImage />
       </BottomCol>
     </Wrapper>
