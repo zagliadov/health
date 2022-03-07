@@ -1,12 +1,10 @@
 import { FC } from 'react';
 import styled from "styled-components";
-import { Row, Typography, Col, Image } from "antd";
+import { Row, Typography, Image } from "antd";
 import diagram1 from '../../img/diagram/diagram1.png';
 import diagram2 from '../../img/diagram/diagram2.png';
 import diagram3 from '../../img/diagram/diagram3.png';
 import diagram4 from '../../img/diagram/diagram4.png';
-import diagram5 from '../../img/diagram/diagram5.png';
-import diagram6 from '../../img/diagram/diagram6.png';
 import diagramInv from '../../img/diagram/diagramInv.png';
 
 
